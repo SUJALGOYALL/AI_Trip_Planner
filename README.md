@@ -6,6 +6,13 @@ An **agentic AI-powered travel planning application** that generates **comprehen
 This project demonstrates **modern agentic AI engineering** using **FastAPI, LangGraph, LangChain, and Streamlit**, with a strong focus on **tool-based reasoning, graph-driven workflows, and robust handling of real-world LLM inputs**.
 
 ---
+## 🎥 Demo Video
+
+A demo video demonstrates:
+
+https://github.com/user-attachments/assets/c1dd50ce-c26f-4399-8531-c7afebc9b40e
+
+---
 
 ## 🚀 Features
 
@@ -200,9 +207,14 @@ pip install -r requirements.txt
 Create a `.env` file in the project root and add **all required API keys**:
 
 ```env
-GROQ_API_KEY=your_groq_api_key
-EXCHANGE_RATE_API_KEY=your_exchange_rate_api_key
-OPENWEATHER_API_KEY=your_openweather_api_key
+GROQ_API_KEY="Your api key"
+GOOGLE_API_KEY="Your api key"
+GPLACES_API_KEY="Your api key"
+FOURSQUARE_API_KEY=""
+TAVILAY_API_KEY="Your api key"
+OPENWEATHERMAP_API_KEY="Your api key"
+EXCHANGE_RATE_API_KEY="Your api key"
+LANGCHAIN_API_KEY=""
 ```
 
 ⚠️ All API keys must be configured for the corresponding tools to function correctly.
@@ -245,17 +257,6 @@ http://localhost:8501
 - Plan a 10-day trip to Paris from India
 - Estimate budget for a 5-day trip to Goa
 
----
-
-## 🎥 Demo Video
-
-A demo video demonstrates:
-- Backend execution
-- Agent reasoning
-- Streamlit UI interaction
-- End-to-end travel planning
-
-(Add video link here)
 ---
 
 ## 🧠 Key Engineering Learnings
