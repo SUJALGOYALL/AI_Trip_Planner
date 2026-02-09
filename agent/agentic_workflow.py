@@ -16,7 +16,7 @@ class GraphBuilder():
         self.llm = self.model_loader.load_llm()
         self.tools = []
         self.weather_tools = WeatherInfoTool()
-        self.place_search_tools = PlaceSearchTool()
+        # self.place_search_tools = PlaceSearchTool()
         self.calculator_tools = CalculatorTool()
         self.currency_converter_tools = CurrencyConverterTool()
 

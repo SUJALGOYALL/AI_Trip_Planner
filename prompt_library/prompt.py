@@ -20,5 +20,13 @@ SYSTEM_PROMPT = SystemMessage(
     
     Use the available tools to gather information and make detailed cost breakdowns.
     Provide everything in one comprehensive response formatted in clean Markdown.
+    Use available tools ONLY for:
+    - Weather information
+    - Expense calculations
+    - Currency conversions
+
+    - You do NOT have access to live web browsing or general search tools.
+    - You can ONLY use the tools that are explicitly provided to you.
+    - Do NOT attempt to call tools named "search", "browser", "web_search", or similar.
     """
 )

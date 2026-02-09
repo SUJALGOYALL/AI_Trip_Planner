@@ -1,11 +1,11 @@
 import requests
 
-class WeatherForecastTool:
+class WeatherForcastTool:
     def __init__(self, api_key:str):
         self.api_key = api_key
         self.base_url = "https://api.openweathermap.org/data/2.5"
 
-    def get_current_weather(self, place:str):
+    def get_weather_current(self, place:str):
         """Get current weather of a place"""
         try:
             url = f"{self.base_url}/weather"

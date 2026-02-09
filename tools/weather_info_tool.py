@@ -1,5 +1,5 @@
 import os
-from typing import Dic, Any, List, Optional
+from typing import Dict, Any, List, Optional
 from dotenv import load_dotenv
 from utils.weather_info import WeatherForcastTool
 from langchain.tools import tool
@@ -16,7 +16,7 @@ class WeatherInfoTool:
         @tool
         def get_current_weather(city:str) -> str:
             """Get the current weather in a given city."""
-            weather_data = self.weather_Service.get_current_weather(city)
+            weather_data = self.weather_Service.get_weather_current(city)
             if weather_data:
                 temp = weather_data.get('main', {}).get('temp' , 'N/A')
                 desc = weather_data.get('weather', [{}])[0].get('description', 'N/A')
@@ -26,7 +26,7 @@ class WeatherInfoTool:
         @tool
         def get_weather_forecast(city:str) -> str:
             """Get the weather forecast for the city."""
-            forecast_data = self.weather_Service.get_weather_forecast(city)
+            forecast_data = self.weather_Service.get_forecast_weather(city)
             if forecast_data and 'list' in forecast_data:
                 forecast_summary = []
                 for i in range(len(forecast_data['list'])):

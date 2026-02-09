@@ -1,3 +1,5 @@
+from utils.number_parser import extract_float
+
 class Calculator:
     @staticmethod
     def multiply(a: int, b: int) -> int:
@@ -11,7 +13,7 @@ class Calculator:
         Returns:
             int: The product of a and b.
         """
-        return a * b
+        return extract_float(a) * extract_float(b)
     
     @staticmethod
     def calculate_total(*x: float) -> float:
@@ -24,7 +26,7 @@ class Calculator:
         Returns:
             float: The sum of numbers in the list x
         """
-        return sum(x)
+        return sum(extract_float(i) for i in x)
     
     @staticmethod
     def calculate_daily_budget(total: float, days: int) -> float:
@@ -38,6 +40,8 @@ class Calculator:
         Returns:
             float: Expense for a single day
         """
+        total = extract_float(total)
+        days = int(extract_float(days))
         return total / days if days > 0 else 0
     
     
