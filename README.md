@@ -170,7 +170,7 @@ Fetches weather-related information to support better itinerary planning.
 ### 1️⃣ Clone the Repository
 
 ```bash
-git clone https://github.com/your-username/AI_Trip_Planner.git
+git clone https://github.com/SUJALGOYALL/AI_Trip_Planner.git
 cd AI_Trip_Planner
 ```
 
